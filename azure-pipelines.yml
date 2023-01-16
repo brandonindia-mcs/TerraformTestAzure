@@ -12,7 +12,7 @@ steps:
 - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
   displayName: 'Terraform : INIT'
   inputs:
-    backendServiceArm: 'Jonnychipz-TFSPN'
+    backendServiceArm: 'SP-TerraformTestAzure'
     backendAzureRmResourceGroupName: 'jonnychipz-infra'
     backendAzureRmStorageAccountName: jonnychipztstate
     backendAzureRmContainerName: tstate
@@ -22,10 +22,10 @@ steps:
   displayName: 'Terraform : PLAN'
   inputs:
     command: plan
-    environmentServiceNameAzureRM: 'Jonnychipz-TFSPN'
+    environmentServiceNameAzureRM: 'SP-TerraformTestAzure'
 
 - task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
   displayName: 'Terraform : VAL & APPLY'
   inputs:
     command: apply
-    environmentServiceNameAzureRM: 'Jonnychipz-TFSPN'
+    environmentServiceNameAzureRM: 'SP-TerraformTestAzure'
