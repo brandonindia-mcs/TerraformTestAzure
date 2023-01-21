@@ -19,7 +19,7 @@ data "azurerm_client_config" "current" {}
 # Create our Resource Group - bindia-RG
 resource "azurerm_resource_group" "rg" {
   name     = "bindia-app01"
-  location = "US East"
+  location = "East US"
 }
 # Create our Virtual Network - bindia-VNET
 resource "azurerm_virtual_network" "vnet" {
